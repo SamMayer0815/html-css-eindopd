@@ -1,0 +1,143 @@
+*{
+  margin: 0px;
+  background-color: rgb(46, 46, 54);
+}
+
+/*Header*/
+
+@keyframes SlideInFromTop{
+  0% {
+    transform: translateY(-150%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.header{
+  display: flex;
+  width: 100%;
+  height: 60px;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.page{
+  width: 15%;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  padding: 10px;
+  margin-left: 50px;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  animation: 0.5s ease-out 0s 1 SlideInFromTop;
+}
+
+.page:hover{
+  transform: scale(1.2); 
+   transition: transform .2s;
+}
+
+
+/*Content*/
+
+.content{
+  width: 80%;
+  height: 1000px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 10%;
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  background-color: white;
+}
+
+.content-img{
+  height: 50%;
+  margin: 5%;
+  background-image: url(./images/chungus.jfif) ;
+  background-size: cover;
+}
+
+.content-text{
+  height: auto;
+  margin: 5%;
+  background-color: white;
+  font-size: 20px;
+  text-align: center;
+}
+
+/*Footer*/
+
+.footer{
+
+  display: grid;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footer-content{
+  background-color: gray;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.footer-text{
+  background-color: gray;
+}
+
+/*Tablet Screen*/
+
+@media screen and (max-width: 1150px) and (min-width: 481px){
+  .footer{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .content-img{
+    height: 30%;
+  }
+
+  .content{
+    height: 700px;
+  }
+
+  .page{
+    margin-left: 25px;
+  }
+
+}
+
+/*Phone Screen*/
+
+@media screen and (max-width: 480px){
+  .footer{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .content-img{
+    height:15% ;
+  }
+
+  .content{
+    height: 600px;
+  }
+
+  .page{
+    margin-left: 5px;
+  }
+}

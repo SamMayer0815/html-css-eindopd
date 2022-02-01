@@ -1,0 +1,196 @@
+*{
+  margin: 0px;
+  background-color: rgb(46, 46, 54);
+}
+
+/*Header*/
+
+@keyframes SlideInFromTop{
+  0% {
+    transform: translateY(-150%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
+.header{
+  display: flex;
+  width: 100%;
+  height: 60px;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.page{
+  width: 15%;
+  justify-content: center;
+  align-content: center;
+  display: flex;
+  padding: 10px;
+  margin-left: 50px;
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  animation: 0.5s ease-out 0s 1 SlideInFromTop;
+}
+
+.page:hover{
+  transform: scale(1.2); 
+  transition: transform .2s;
+}
+
+/*Gallary*/
+
+.gallary{
+  display: grid;
+  width: 96%;
+  margin-left: 2%;
+  height: 2000px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.gallary-img:hover{
+  transform: scale(1.08);
+}
+
+.gallary-img{
+  margin: 2%;
+  width: auto;
+  height: auto;
+}
+
+.gallary-img-1{
+  background-image: url(./images/chungus.jfif);
+  background-size: cover;
+}
+
+.gallary-img-2{
+  background-image: url(./images/chungus-1.png);
+  background-size: cover;
+}
+
+.gallary-img-3{
+  background-image: url(./images/chungus-2.png);
+  background-size: cover;
+}
+
+.gallary-img-4{
+  background-image: url(./images/chungus-3.png);
+  background-size: cover;
+}
+
+.gallary-img-5{
+  background-image: url(./images/chungus-4.png);
+  background-size: cover;
+}
+
+.gallary-img-6{
+  background-image: url(./images/chungus-5.png);
+  background-size: cover;
+}
+
+.gallary-img-7{
+  background-image: url(./images/chungus-6.png);
+  background-size: cover;
+}
+
+.gallary-img-8{
+  background-image: url(./images/chungus-7.png);
+  background-size: cover;
+}
+
+.gallary-img-9{
+  background-image: url(./images/chungus-8.png);
+  background-size: cover;
+}
+
+.gallary-img-10{
+  background-image: url(./images/chungus-9.png);
+  background-size: cover;
+}
+
+
+/*Footer*/
+
+.footer{
+
+  display: grid;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  height: 50px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.footer-content{
+  background-color: gray;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.footer-text{
+  background-color: gray;
+}
+
+/*Pc Screen*/
+
+@media screen and (max-width: 1300px) and (min-width: 1151px){
+  .gallary{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    height: 7000px;
+  }
+}
+
+/*Tablet Screen*/
+
+@media screen and (max-width: 1150px) and (min-width: 481px){
+  .footer{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  .page{
+    margin-left: 25px;
+  }
+  
+  .gallary{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    height: 4000px;
+  }
+
+}
+
+/*Phone Screen*/
+
+@media screen and (max-width: 480px){
+  .footer{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .page{
+    margin-left: 5px;
+  }
+
+  .gallary{
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+  }
+
+  .gallary-img{
+    height: auto;
+  }
+
+}
